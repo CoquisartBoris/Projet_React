@@ -1,0 +1,18 @@
+.footer {
+    background-color: black;
+    color: white;
+    height: 210px;
+}
+
+.footerTitle {
+
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.footerPlus {
+    display: flex;
+    justify-content: center;
+}

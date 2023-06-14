@@ -1,0 +1,11 @@
+.backgroundImg {
+    width: 80%;
+    height: 200px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+}
