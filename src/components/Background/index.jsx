@@ -1,5 +1,5 @@
 import './background.css'
-import Logo from './imgg.jpg'
+import Logo from './../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png'
 
 function background(){
     return (

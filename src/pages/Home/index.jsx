@@ -1,13 +1,12 @@
-
+import HomeBackground from '../../components/HomeBackground'
+import Card from '../../components/Card'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          Home Sweet Home
-        </h1>
-        
+        <HomeBackground />
+        <Card />
       </header>
     </div>
   );
