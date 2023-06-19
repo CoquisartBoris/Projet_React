@@ -1,30 +1,24 @@
-import './card.scss'
+import './cardlist.scss'
 import React, { useState, useEffect } from 'react';
+import MyCard from '../../components/MyCard'
 
-function Card() {
+function CardList() {
     const [datas, setDatas] = useState(null)
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
-            console.log(response);
             return response.json()
         }).then((data) => {
-            console.log(data);
+            setDatas(data);
         });
-
-        /*
-            .then((response) => response.json()
-            .then(({ data }) => console.log(data))
-            .catch((error) => console.log(error))
-        )
-        */
     },[])
 
     return (
+        
         <div className='cardWrapper'>
-            
+            <MyCard data={datas}/>
         </div>
     )
 }
 
-export default Card
+export default CardList
