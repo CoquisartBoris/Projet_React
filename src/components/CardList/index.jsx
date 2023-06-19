@@ -4,7 +4,6 @@ import MyCard from '../../components/MyCard'
 
 function CardList() {
     const [datas, setDatas] = useState(null)
-    const i = 0
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
