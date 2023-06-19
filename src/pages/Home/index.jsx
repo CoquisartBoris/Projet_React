@@ -1,7 +1,7 @@
 import HomeBackground from '../../components/HomeBackground'
 import Card from '../../components/Card'
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
