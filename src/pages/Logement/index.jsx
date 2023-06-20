@@ -16,6 +16,7 @@ function Logement() {
             <img src={newData.props.data.host.picture}></img>
             <p className='logementLocation'>{newData.props.data.location}</p>
             <ul className='logementTags'>{tagList}</ul>
+            <p>rating = {newData.props.data.rating}</p>
         </div>
     )
 }
