@@ -1,5 +1,25 @@
 .logementWrapper {
-    .logementImg {
-        width: 500px;
+    color: #FF6060;
+    font-style: normal;
+    font-family: 'Montserrat';
+    .logementTitle {
+        font-weight: 500;
+        font-size: 36px;
+    }
+    .logementLocation {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    ul {
+        display: flex;
+        
+    }
+    li {
+        background-color: #FF6060;
+        color: white;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px 30px 5px 30px;
+        width: auto;
     }
 }
