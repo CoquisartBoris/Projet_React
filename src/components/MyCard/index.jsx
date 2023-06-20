@@ -8,7 +8,6 @@ function myCard(props) {
             <div className='card' /*onClick={() => alert("Hello from " + props.data.title)}*/>
                 <img src={props.data.cover} className='cardImg'></img>
                 <h1 className='cardTitle'>{props.data.title}</h1>
-                <p className='logementLocation'>{props.data.location}</p>
             </div>
         </Link>
     )
