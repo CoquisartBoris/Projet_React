@@ -10,17 +10,16 @@
         font-weight: 500;
         font-size: 18px;
     }
-    ul {
+    .logementTags {
         display: flex;
-        
-    }
-    li {
-        background-color: #FF6060;
-        color: white;
-        border-radius: 20px;
-        margin: 5px;
-        padding: 5px 30px 5px 30px;
-        width: auto;
-        list-style-type: none;
+        .tag {
+            background-color: #FF6060;
+            color: white;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px 30px 5px 30px;
+            width: auto;
+            list-style-type: none;
+        }
     }
 }

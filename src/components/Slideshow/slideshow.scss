@@ -1,0 +1,9 @@
+.slideshowWrapper {
+    display: flex;
+    justify-content: center;
+    .imageWrapper {
+        width: 80%;
+        height: 500px;
+        border-radius: 25px;
+    }
+}
