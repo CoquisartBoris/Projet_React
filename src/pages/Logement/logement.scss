@@ -2,24 +2,54 @@
     color: #FF6060;
     font-style: normal;
     font-family: 'Montserrat';
-    .logementTitle {
-        font-weight: 500;
-        font-size: 36px;
-    }
-    .logementLocation {
-        font-weight: 500;
-        font-size: 18px;
-    }
-    .logementTags {
+    .test {
+        margin: auto;
+        width: 80%;
         display: flex;
-        .tag {
-            background-color: #FF6060;
-            color: white;
-            border-radius: 20px;
-            margin: 5px;
-            padding: 5px 30px 5px 30px;
-            width: auto;
-            list-style-type: none;
+        justify-content: space-between;
+        .hostWrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            .hostPict {
+                border-radius: 50%;
+                height: 100px;
+            }
+            .logementHost {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                padding-top: 10%;
+                margin-right: 25px;
+            }
         }
+        
+        .logementTitle {
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 36px;
+        }
+        .logementLocation {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        .logementTags {
+            display: flex;
+            padding: 0;
+            .tag {
+                background-color: #FF6060;
+                color: white;
+                border-radius: 20px;
+                margin: 5px;
+                padding: 5px 30px 5px 30px;
+                width: auto;
+                list-style-type: none;
+            }
+        }
+    }
+    .cardCollapseWrapper {
+        display: flex;
+        width: 80%;
+        margin: auto;
     }
 }
