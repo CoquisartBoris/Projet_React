@@ -27,9 +27,12 @@ function Logement() {
                 <div className='hostWrapper'>
                     <p className='logementHost'>{newData.props.data.host.name}</p>
                     <img src={newData.props.data.host.picture} className='hostPict'></img>
-                    <Rating data={newData.props.data.rating}/>
+                    <div className='ratingWrapper'>
+                        <Rating data={newData.props.data.rating}/>
+                    </div>
                 </div>
             </div>
+            
             <div className='cardCollapseWrapper'>
                 <CardCollapseDesc data={newData.props.data} />
                 <CardCollapseEquip data={newData.props.data}/>
