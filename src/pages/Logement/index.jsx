@@ -3,6 +3,7 @@ import './logement.scss'
 import Slideshow from '../../components/Slideshow'
 import CardCollapseDesc from '../../components/cardCollapseDesc'
 import CardCollapseEquip from '../../components/cardCollapseEquip'
+import Rating from '../../components/Rating'
 
 function Logement() {
     const location = useLocation()
@@ -26,6 +27,7 @@ function Logement() {
                 <div className='hostWrapper'>
                     <p className='logementHost'>{newData.props.data.host.name}</p>
                     <img src={newData.props.data.host.picture} className='hostPict'></img>
+                    <Rating data={newData.props.data.rating}/>
                 </div>
             </div>
             <div className='cardCollapseWrapper'>
