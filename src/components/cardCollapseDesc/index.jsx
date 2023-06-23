@@ -23,12 +23,12 @@ console.log(props.data.description)
     return (
         <div className='wrapperCardCollapseDesc'>
             <div className='accordion'>
-                    <div className='item'>
-                        <div className='title' onClick={() => toggleDesc(i)}>
+                    <div className='itemCardCollapseDesc'>
+                        <div className='titleCardCollapseDesc' onClick={() => toggleDesc(i)}>
                             <h2>Description</h2>
                             <span>{selected === i ? '-' : '+'}</span>
                         </div>
-                        <div className={selected === i ? 'content show' : 'content'}>{props.data.description}</div>
+                        <div className={selected === i ? 'contentCardCollapseDesc show' : 'contentCardCollapseDesc'}>{props.data.description}</div>
                             
                     </div>
             </div>

@@ -18,9 +18,9 @@ const Slideshow = (props) => {
 
     return(
         <div className='slideshowWrapper'> 
-            <p onClick={goToPrevious}>prev</p>
+            <p className='prevArrow' onClick={goToPrevious}>&#8249;</p>
             <img className='imageWrapper' src={props.images[currentIndex]}></img>
-            <p onClick={goToNext}>next</p>
+            <p className='nextArrow' onClick={goToNext}>&#8250;</p>
         </div>
     )
 };

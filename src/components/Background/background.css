@@ -3,6 +3,7 @@
     height: 200px;
     background-color: black;
     border-radius: 25px;
+    object-fit: cover;
 }
 
 .test {

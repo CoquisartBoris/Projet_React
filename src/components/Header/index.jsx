@@ -6,7 +6,7 @@ function Header() {
         <nav>
             <p className='logo'>KASA</p>
             <Link to="/">Accueil</Link>
-            <Link to="/APropos">A propos</Link>
+            <Link to="/APropos">Apropos</Link>
         </nav>
     )
 }

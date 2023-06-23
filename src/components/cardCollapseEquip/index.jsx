@@ -18,14 +18,14 @@ function CardCollapseEquip (props){
         <li>{item}</li>
     );
     return (
-        <div className='wrapperCardCollapseDesc'>
+        <div className='wrapperCardCollapseDesc wrapperCardCollapseEquip'>
             <div className='accordion'>
-                    <div className='item'>
-                        <div className='title' onClick={() => toggle(i)}>
+                    <div className='itemCardCollapseDesc'>
+                        <div className='titleCardCollapseDesc' onClick={() => toggle(i)}>
                             <h2>Equipement</h2>
                             <span>{selected === i ? '-' : '+'}</span>
                         </div>
-                        <div className={selected === i ? 'content show' : 'content'}>{equipList}</div>
+                        <div className={selected === i ? 'contentCardCollapseDesc show' : 'contentCardCollapseDesc'}>{equipList}</div>
                             
                     </div>
             </div>

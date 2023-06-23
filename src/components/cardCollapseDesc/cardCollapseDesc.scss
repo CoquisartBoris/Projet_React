@@ -1,5 +1,35 @@
 .wrapperCardCollapseDesc {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    .itemCardCollapseDesc {
+        background: #FF6060;
+        margin-bottom: 2.5%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        .titleCardCollapseDesc {
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .contentCardCollapseDesc {
+            color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0,1,0,1);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .contentCardCollapseDesc.show {
+            height: 100px;
+            max-height: 9999px;
+            transition: all 0.5s cubic-bezier(0,1,0,1);
+        }
+    }
 }
