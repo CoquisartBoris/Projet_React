@@ -4,6 +4,7 @@ import MyCard from '../../components/MyCard'
 
 function CardList() {
     const [datas, setDatas] = useState(null)
+    let i = 0;
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
@@ -13,6 +14,10 @@ function CardList() {
         });
     },[])
 
+    const listItems = datas.map((test) =>
+        <MyCard data={test}/>
+    )
+    /*
     return (
         <div className='cardWrapper'>
             <MyCard data={datas[0]}/>
@@ -23,6 +28,10 @@ function CardList() {
             <MyCard data={datas[5]}/>
         </div>
     )
+    */
+   return (
+    <ul className='cardWrapper'>{listItems}</ul>
+   )
 }
 
 export default CardList

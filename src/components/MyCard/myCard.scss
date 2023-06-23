@@ -1,17 +1,19 @@
 .card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-color: red;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    padding: 50px;
+    //background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    width: 400px;
+    height: 400px;
+    margin: 50px;
     border-radius: 10px;
     .cardTitle{
-        font-size: 14px;
+        font-size: 18px;
         color: white;
+        margin-top: -60px;
+        margin-left: 20px;
+        width: 60%;
     }
     .cardImg{
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
     }
 }

@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 2%;
+    a {
+        color: #FF6060;
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 1.5%;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    .logo {
+        color: #FF6060;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 1.5%;
+        width: 80%;
+    }
+}
+
