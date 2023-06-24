@@ -47,3 +47,14 @@
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(0,1,0,1);
 }
+
+.normal {
+    font-size: 100px;
+    transform: rotate(0);
+    transition-duration: 0.5s;
+}
+.rotated {
+    font-size: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}

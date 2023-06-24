@@ -19,10 +19,9 @@ function Collapse (){
                     <div className='item'>
                         <div className='title' onClick={() => toggle(i)}>
                             <h2>{item.question}</h2>
-                            <span>{selected === i ? '-' : '+'}</span>
+                            <span className={selected === i ? 'rotated' : 'normal'}>^</span>
                         </div>
                         <div className={selected === i ? 'content show' : 'content'}>{item.answer}</div>
-                            
                     </div>
                 ))}
             </div>
