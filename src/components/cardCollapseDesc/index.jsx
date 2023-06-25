@@ -2,7 +2,6 @@ import './cardCollapseDesc.scss'
 import { useState } from 'react'
 
 function CardCollapseDesc(props) {
-console.log(props.data.description)
     const [selected, setSelected] = useState(null)
 
     const toggleDesc = (i) => {
@@ -20,6 +19,7 @@ console.log(props.data.description)
         setSelected(i)
     }
     let i = 0
+
     return (
         <div className='wrapperCardCollapseDesc'>
             <div className='accordion'>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import MyCard from '../../components/MyCard'
 
 function CardList() {
-    const [datas, setDatas] = useState(null)
+    const [datas, setDatas] = useState([])
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
