@@ -1,8 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import './logement.scss'
 import Slideshow from '../../components/Slideshow'
-import CardCollapseDesc from '../../components/cardCollapseDesc'
-import CardCollapseEquip from '../../components/cardCollapseEquip'
+import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
 
 function Logement() {
@@ -25,8 +24,8 @@ function Logement() {
                     <ul className='logementTags'>{tagList}</ul>
                 </div>
                 <div className='hostWrapper'>
-                    <p className='logementHost'>{newData.props.data.host.name}</p>
-                    <img src={newData.props.data.host.picture} className='hostPict'></img>
+                        <p className='logementHost'>{newData.props.data.host.name}</p>
+                        <img src={newData.props.data.host.picture} className='hostPict'></img>
                     <div className='ratingWrapper'>
                         <Rating data={newData.props.data.rating}/>
                     </div>
@@ -34,8 +33,8 @@ function Logement() {
             </div>
             
             <div className='cardCollapseWrapper'>
-                <CardCollapseDesc data={newData.props.data} />
-                <CardCollapseEquip data={newData.props.data}/>
+                <Collapse question={"Description"} answers={[newData.props.data.description]}/>
+                <Collapse question={"Equipement"} answers={newData.props.data.equipments}/>
             </div>
         </div>
     )

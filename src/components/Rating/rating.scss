@@ -1,14 +1,20 @@
 .vroum {
     display: flex;
     .starRating {
-    
+        
         .starGrey {
             color: #E3E3E3;
             font-size: 50px;
+            @media (max-width: 860px) {
+                font-size: 20px;
+            }
         }
         .starRed {
             color: #FF6060;
             font-size: 50px;
+            @media (max-width: 860px) {
+                font-size: 20px;
+            }
         }
     } 
 }

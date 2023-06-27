@@ -1,4 +1,4 @@
-import './background.css'
+import './background.scss'
 import Logo from './../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png'
 import Logo2 from './../../assets/IMG.png'
 

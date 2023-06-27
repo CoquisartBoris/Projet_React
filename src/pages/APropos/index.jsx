@@ -1,12 +1,14 @@
 import Background from "../../components/Background";
-import Collapse from "../../components/Collapse";
+import CollapseList from "../../components/CollapseList";
 
 function About() {
+  const test = "test"
+  
     return (
       <div className="App">
         <header className="App-header">
           <Background/>
-          <Collapse />
+          <CollapseList data={test}/>
         </header>
       </div>
     );
