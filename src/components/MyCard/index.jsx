@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 function myCard(props) {
     console.log(props)
+    const path = "Logement/" + props.data.id
     return (
-        <Link to="Logement" state={{ newData: {props} }}>
+        <Link to={path}>
             <div className='card'>
                 <img src={props.data.cover} className='cardImg' ></img>
                 <h1 className='cardTitle'>{props.data.title}</h1>

@@ -15,20 +15,16 @@ function Collapse ({question, answers}){
         content = <ul>{items}</ul>
     }
         return (
-                        <div className='item'>
-                            <div className='title' onClick={() => setSelected(!selected)}>
-                                <h2>{question}</h2>
-                                <span className={selected ? 'rotated' : 'normal'}>^</span>
-                            </div>
-                            <div className={selected ? 'content show' : 'content'}>
-                                {content}  
-                            </div>    
-                        </div>
+            <div className='item'>
+                <div className='title' onClick={() => setSelected(!selected)}>
+                    <h2>{question}</h2>
+                    <span className={selected ? 'rotated' : 'normal'}>^</span>
+                </div>
+                <div className={selected ? 'content show' : 'content'}>
+                    {content}  
+                </div>    
+            </div>
         )
-
-    
-
-    
 }
 
 export default Collapse;

@@ -1,12 +1,13 @@
 import Background from '../../components/Background'
 import CardList from '../../components/CardList'
+import Logo2 from './../../assets/IMG.png'
 
 function Home() {
-  const text = "yes"
+  const content = "Chez vous, partout et ailleurs"
   return (
     <div className="App">
       <header className="App-header">
-        <Background data={text}/>
+        <Background title={content} image={Logo2}/>
         <CardList />
       </header>
     </div>

@@ -1,40 +1,58 @@
-import { useLocation } from 'react-router-dom'
 import './logement.scss'
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
+import { useParams } from 'react-router-dom'
+import { useState,useEffect } from "react"
 
 function Logement() {
-    const location = useLocation()
-    const { newData } = location.state
-    const tags = newData.props.data.tags
+    const { id } = useParams()
+    console.log(id)
+    const [housing, setHousing] = useState(null)
+    
+    useEffect(() => {
+        fetch('/Data/data.json').then((response) => {
+            return response.json()
+        }).then((data) => {
+            data.map((item) => {
+                if (item.id === id) {
+                    setHousing(item);
+                }
+            })  
+        });
+    },[])
+
+    if (housing === null) {
+        return (<div>Loading ...</div>)
+    }
+    const tags = housing.tags ? housing.tags : []
     const tagList = tags.map((tag, i) =>
         <li className='tag' key={i}>{tag}</li>
     );
-
-    //<p>rating = {newData.props.data.rating}</p>
     
+    console.log(housing)
     return (
+        
         <div className='logementWrapper'>
-            <Slideshow images={newData.props.data.pictures}/>
+            <Slideshow images={housing.pictures}/>
             <div className='test'>
                 <div className='infoWrapper'>
-                    <h1 className='logementTitle'>{newData.props.data.title}</h1>
-                    <p className='logementLocation'>{newData.props.data.location}</p>
+                    <h1 className='logementTitle'>{housing.title}</h1>
+                    <p className='logementLocation'>{housing.location}</p>
                     <ul className='logementTags'>{tagList}</ul>
                 </div>
                 <div className='hostWrapper'>
-                        <p className='logementHost'>{newData.props.data.host.name}</p>
-                        <img src={newData.props.data.host.picture} className='hostPict'></img>
+                        <p className='logementHost'>{housing.host?.name}</p>
+                        <img src={housing.host?.picture} className='hostPict'></img>
                     <div className='ratingWrapper'>
-                        <Rating data={newData.props.data.rating}/>
+                        <Rating data={housing.rating}/>
                     </div>
                 </div>
             </div>
             
             <div className='cardCollapseWrapper'>
-                <Collapse question={"Description"} answers={[newData.props.data.description]}/>
-                <Collapse question={"Equipement"} answers={newData.props.data.equipments}/>
+                <Collapse question={"Description"} answers={[housing.description]}/>
+                <Collapse question={"Equipement"} answers={housing.equipments}/>
             </div>
         </div>
     )

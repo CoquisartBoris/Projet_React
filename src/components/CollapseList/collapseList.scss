@@ -5,13 +5,12 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     align-items: center;
-}
-
-.accordion {
-    width: 80%;
+    .accordion {
+        width: 80%;
+    }
 }
 
 .item {
@@ -19,17 +18,16 @@
     margin-bottom: 2.5%;
     padding: 10px 20px;
     border-radius: 5px;
-}
-
-.title {
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    .title {
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+    }
 }
 
 .content {

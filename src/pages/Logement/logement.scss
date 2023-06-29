@@ -87,13 +87,18 @@
         }
     }
     .cardCollapseWrapper {
-        display: flex;
+        
         width: 80%;
         margin: auto;
         @media (max-width: 860px) {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
+        }
+        .item {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
         }
     }
 }

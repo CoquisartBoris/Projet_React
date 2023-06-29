@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './collapseList.css'
+import './collapseList.scss'
 import Collapse from "../Collapse"
 
 function CollapseList (props){
