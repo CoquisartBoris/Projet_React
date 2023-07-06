@@ -35,7 +35,7 @@ function Logement() {
         
         <div className='logementWrapper'>
             <Slideshow images={housing.pictures}/>
-            <div className='test'>
+            <div className='specWrapper'>
                 <div className='infoWrapper'>
                     <h1 className='logementTitle'>{housing.title}</h1>
                     <p className='logementLocation'>{housing.location}</p>

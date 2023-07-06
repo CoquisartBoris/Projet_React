@@ -6,7 +6,7 @@ const rating = (props) => {
     let finalNote = 5 - note;
     console.log("final note : " + finalNote)
     return (
-        <div className='vroum'>
+        <div className='ratingWrapper'>
             <div className="starRating">
                 {[...Array(note)].map((star) => {    
                 return (
