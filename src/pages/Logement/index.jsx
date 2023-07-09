@@ -29,8 +29,6 @@ function Logement() {
     const tagList = tags.map((tag, i) =>
         <li className='tag' key={i}>{tag}</li>
     );
-    
-    console.log(housing)
     return (
         
         <div className='logementWrapper'>
