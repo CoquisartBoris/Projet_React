@@ -13,8 +13,8 @@ function CardList() {
         });
     },[])
 
-    const listItems = datas.map((test) =>
-        <MyCard data={test}/>
+    const listItems = datas.map((cardData) =>
+        <MyCard title={cardData.title} id={cardData.id} cover= {cardData.cover}/>
     )
     
    return (

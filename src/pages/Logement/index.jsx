@@ -7,7 +7,7 @@ import { useState,useEffect } from "react"
 
 function Logement() {
     const { id } = useParams()
-    console.log(id)
+
     const [housing, setHousing] = useState(null)
     
     useEffect(() => {
@@ -43,7 +43,7 @@ function Logement() {
                         <p className='logementHost'>{housing.host?.name}</p>
                         <img src={housing.host?.picture} className='hostPict'></img>
                     <div className='ratingWrapper'>
-                        <Rating data={housing.rating}/>
+                        <Rating ratingValue={housing.rating}/>
                     </div>
                 </div>
             </div>

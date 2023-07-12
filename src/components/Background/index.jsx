@@ -1,10 +1,10 @@
 import './background.scss'
 
-function background(props){
+function background({title, image}){
     return(
         <div className='container'>
-                <img src={props.image} alt='bg' className='backgroundImg'></img>
-                <h2 className='centered'>{props.title}</h2>
+                <img src={image} alt='bg' className='backgroundImg'></img>
+                <h2 className='centered'>{title}</h2>
             </div>
     )
 }

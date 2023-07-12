@@ -1,14 +1,13 @@
 import './myCard.scss'
 import { Link } from 'react-router-dom'
 
-function myCard(props) {
-    console.log(props)
-    const path = "Logement/" + props.data.id
+function myCard({title, cover, id}) {
+    const path = "Logement/" + id
     return (
         <Link to={path}>
             <div className='card'>
-                <img src={props.data.cover} className='cardImg' ></img>
-                <h1 className='cardTitle'>{props.data.title}</h1>
+                <img src={cover} className='cardImg' alt={title}></img>
+                <h1 className='cardTitle'>{title}</h1>
             </div>
         </Link>
     )

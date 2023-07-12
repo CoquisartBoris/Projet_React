@@ -1,21 +1,18 @@
 import './rating.scss'
 
-const rating = (props) => {
-    console.log("note :"+props.data)
-    let note = parseInt(props.data)
-    let finalNote = 5 - note;
-    console.log("final note : " + finalNote)
+function Rating({ratingValue}) {
+    ratingValue = parseInt(ratingValue)
     return (
         <div className='ratingWrapper'>
             <div className="starRating">
-                {[...Array(note)].map((star) => {    
+                {[...Array(ratingValue)].map(() => {    
                 return (
                     <span className="starRed">&#9733;</span>
                 );
             })}
             </div>
             <div className="starRating">
-                {[...Array(finalNote)].map((star) => {    
+                {[...Array(5 - ratingValue)].map(() => {    
                 return (
                     <span className="starGrey">&#9733;</span>
                 );
@@ -25,4 +22,4 @@ const rating = (props) => {
     )
 }
 
-export default rating
+export default Rating
