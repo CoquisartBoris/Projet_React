@@ -1,9 +1,10 @@
 .cardWrapper {
     border-radius: 25px;
-    padding: 0;
+    padding-left: 0;
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
     width: 80%;
     height: auto;
