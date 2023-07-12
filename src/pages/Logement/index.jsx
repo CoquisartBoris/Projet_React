@@ -29,6 +29,11 @@ function Logement() {
     const tagList = tags.map((tag, i) =>
         <li className='tag' key={i}>{tag}</li>
     );
+
+    const hostNames = housing.host.name.split(' ')
+    let firstName = hostNames[0]
+    let splittedName = hostNames[1]
+
     return (
         
         <div className='logementWrapper'>
@@ -40,7 +45,7 @@ function Logement() {
                     <ul className='logementTags'>{tagList}</ul>
                 </div>
                 <div className='hostWrapper'>
-                        <p className='logementHost'>{housing.host?.name}</p>
+                        <p className='logementHost'>{firstName} <br></br> {splittedName}</p>
                         <img src={housing.host?.picture} className='hostPict'></img>
                     <div className='ratingWrapper'>
                         <Rating ratingValue={housing.rating}/>
