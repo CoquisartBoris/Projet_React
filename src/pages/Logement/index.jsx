@@ -4,26 +4,29 @@ import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
 import { useParams } from 'react-router-dom'
 import { useState,useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 
 function Logement() {
     const { id } = useParams()
-
+    const navigate = useNavigate();
     const [housing, setHousing] = useState(null)
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
             return response.json()
         }).then((data) => {
-            data.map((item) => {
+            data.find((item) => {
                 if (item.id === id) {
                     setHousing(item);
                 }
-            })  
+                
+            })
         });
     },[])
-
     if (housing === null) {
         return (<div>Loading ...</div>)
+    } else if (housing.id === undefined){
+        navigate("/")
     }
     const tags = housing.tags ? housing.tags : []
     const tagList = tags.map((tag, i) =>

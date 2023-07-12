@@ -6,7 +6,6 @@ function Header() {
     return (
         <nav>
             <p className='logo'>K<img className='logoHeader' src={LogoHeader}></img>SA</p>
-            
             <Link to="/">Accueil</Link>
             <Link to="/APropos">Apropos</Link>
         </nav>

@@ -12,16 +12,16 @@
         width: 80%;
     }
 }
-
 .item {
     background: #FF6060;
     margin-bottom: 2.5%;
-    padding: 0px 20px;
+    padding: 0px 0px;
     border-radius: 5px;
     margin-left: 10px;
     margin-right: 10px;
     
     .title {
+        padding-left: 15px;
         color: #FFFFFF;
         display: flex;
         justify-content: space-between;
@@ -42,6 +42,10 @@
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     @media (max-width: 860px) {
         font-size: 14px;
     }
@@ -51,15 +55,21 @@
     height: auto;
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(0,1,0,1);
+    color: #FF6060;
+    background: #F6F6F6;
 }
 
 .normal {
     font-size: 50px;
     transform: rotate(0);
     transition-duration: 0.5s;
+    position: relative;
+    right: 20px;
 }
 .rotated {
     font-size: 50px;
     transform: rotate(180deg);
     transition-duration: 0.5s;
+    position: relative;
+    right: 20px;
 }
