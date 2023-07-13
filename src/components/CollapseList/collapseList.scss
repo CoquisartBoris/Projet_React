@@ -36,41 +36,34 @@
 }
 
 .content {
-    color: white;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: max-height 0.3s ease-in;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    color: #FF6060;
+    background: #F6F6F6;
     @media (max-width: 860px) {
         font-size: 14px;
     }
 }
-
+.contentText {
+    padding: 2.5%;
+}
 .content.show {
     height: auto;
-    max-height: 9999px;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
-    color: #FF6060;
-    background: #F6F6F6;
+    max-height: 800px;
+    transition: max-height 0.5s ease-in;
+    
 }
-
-.normal {
+.logoCollapse {
+    margin-right: 20px;
     font-size: 50px;
-    transform: rotate(0);
+    transform-origin: center;
     transition-duration: 0.5s;
-    position: relative;
-    right: 20px;
+    vertical-align: middle;
 }
 .rotated {
-    font-size: 50px;
     transform: rotate(180deg);
-    transition-duration: 0.5s;
-    position: relative;
-    right: 20px;
 }

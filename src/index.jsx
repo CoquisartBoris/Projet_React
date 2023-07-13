@@ -19,8 +19,8 @@ root.render(<React.StrictMode>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/APropos" element={<APropos />} />
-      <Route path="*" element={<Error />} />
       <Route path="/Logement/:id" element={<Logement />} />
+      <Route path="*" element={<Error />} />
     </Routes>
     <Footer/>
   </Router>

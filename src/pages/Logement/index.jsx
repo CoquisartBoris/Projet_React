@@ -2,36 +2,39 @@ import './logement.scss'
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
-import { useParams } from 'react-router-dom'
+import Tag from './../../components/Tag'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState,useEffect } from "react"
-import { useNavigate } from "react-router-dom";
 
 function Logement() {
     const { id } = useParams()
-    const navigate = useNavigate();
     const [housing, setHousing] = useState(null)
+    const navigate = useNavigate();
+    const [loaded, setLoaded] = useState(false)
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
+            console.log(response)
             return response.json()
         }).then((data) => {
-            data.find((item) => {
-                if (item.id === id) {
-                    setHousing(item);
-                }
-                
-            })
-        });
+            console.log(data)
+            let housingData = data.find((item) => item.id === id)
+            setLoaded(true)
+            setHousing(housingData)
+           // if (housingData === undefined) {
+            //     window.location.href=("/");
+            // } 
+            
+    });
     },[])
-    if (housing === null) {
+    console.log(housing)
+    if (loaded === false) {
         return (<div>Loading ...</div>)
-    } else if (housing.id === undefined){
-        navigate("/")
     }
-    const tags = housing.tags ? housing.tags : []
-    const tagList = tags.map((tag, i) =>
-        <li className='tag' key={i}>{tag}</li>
-    );
+    if (loaded === true && housing === undefined){
+        navigate("/404")
+        return (<div>Redirecting ...</div>)
+    }
 
     const hostNames = housing.host.name.split(' ')
     let firstName = hostNames[0]
@@ -45,7 +48,13 @@ function Logement() {
                 <div className='infoWrapper'>
                     <h1 className='logementTitle'>{housing.title}</h1>
                     <p className='logementLocation'>{housing.location}</p>
-                    <ul className='logementTags'>{tagList}</ul>
+                    <ul className='logementTags'>
+                        {housing.tags.map((tag, key) => {
+                            return (
+                            <Tag key={key} label={tag}/>
+                            )
+                        }) }
+                    </ul>
                 </div>
                 <div className='hostWrapper'>
                         <p className='logementHost'>{firstName} <br></br> {splittedName}</p>

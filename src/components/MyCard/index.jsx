@@ -7,6 +7,7 @@ function myCard({title, cover, id}) {
         <Link className='cardLink' to={path}>
             <div className='card'>
                 <img src={cover} className='cardImg' alt={title}></img>
+                <div className='overlay'></div>
                 <h1 className='cardTitle'>{title}</h1>
             </div>
         </Link>

@@ -19,10 +19,10 @@ function Collapse ({question, answers}){
             <div className='item'>
                 <div className='title' onClick={() => setSelected(!selected)}>
                     <h2>{question}</h2>
-                    <span className={selected ? 'rotated' : 'normal'}><img className='logoCollapse' src={Logo}></img></span>
+                    <img className={ selected ? 'rotated logoCollapse' : 'logoCollapse' } alt= {selected ? 'close' : 'open'} src={Logo}></img>
                 </div>
                 <div className={selected ? 'content show' : 'content'}>
-                    {content}  
+                    <div className='contentText'>{content}</div>
                 </div>    
             </div>
         )

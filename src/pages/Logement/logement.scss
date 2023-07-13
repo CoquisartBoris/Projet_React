@@ -72,18 +72,7 @@
                 flex-wrap: wrap;
             
             }
-            .tag {
-                background-color: #FF6060;
-                color: white;
-                border-radius: 20px;
-                margin: 5px;
-                padding: 5px 30px 5px 30px;
-                width: auto;
-                list-style-type: none;
-                @media (max-width: 860px) {
-                    font-size: 12px;
-                }
-            }
+            
         }
     }
     .cardCollapseWrapper {
