@@ -3,6 +3,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     margin-bottom: 2%;
+
     a {
         color: #FF6060;
         text-decoration: none;
@@ -11,6 +12,11 @@ nav {
         font-weight: 500;
         font-size: 24px;
         margin: 1.5%;
+        @media (max-width: 500px) {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
     }
     a:hover {
         text-decoration: underline;
@@ -24,8 +30,14 @@ nav {
         font-size: 62px;
         margin: 1.5%;
         width: 80%;
-        .logooHeader {
+        @media (max-width: 500px) {
+            font-size: 40px;
+        }
+        .logoHeader {
             height: 53px;
+            @media (max-width: 500px) {
+                height: 30px;
+            }
         }
     }
 }
