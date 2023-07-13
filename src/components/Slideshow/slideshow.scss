@@ -16,6 +16,7 @@
         left: 10%;
         cursor: pointer;
         color: white;
+        
     }
     .nextArrow {
         font-size: 200px;
@@ -24,6 +25,7 @@
         right: 10%;
         cursor: pointer;
         color: white;
+        
     }
     .slideshowCounter {
         font-size: 18px;
@@ -33,5 +35,8 @@
         top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 }

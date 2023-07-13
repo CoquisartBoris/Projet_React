@@ -14,20 +14,14 @@ function Logement() {
     
     useEffect(() => {
         fetch('/Data/data.json').then((response) => {
-            console.log(response)
             return response.json()
         }).then((data) => {
-            console.log(data)
             let housingData = data.find((item) => item.id === id)
             setLoaded(true)
-            setHousing(housingData)
-           // if (housingData === undefined) {
-            //     window.location.href=("/");
-            // } 
-            
+            setHousing(housingData)     
     });
     },[])
-    console.log(housing)
+    
     if (loaded === false) {
         return (<div>Loading ...</div>)
     }
