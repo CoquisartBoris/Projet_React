@@ -9,4 +9,8 @@
     width: 80%;
     height: auto;
     background-color: #F7F7F7;
+    @media (max-width: 500px) {
+        background-color: #FFFF;
+        
+    }
 }
