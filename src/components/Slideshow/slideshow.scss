@@ -25,4 +25,13 @@
         cursor: pointer;
         color: white;
     }
+    .slideshowCounter {
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

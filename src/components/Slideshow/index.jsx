@@ -20,6 +20,7 @@ const Slideshow = ({images}) => {
         <div className='slideshowWrapper'> 
             <p className='prevArrow' onClick={goToPrevious}>&#8249;</p>
             <img className='imageWrapper' src={images[currentIndex]}></img>
+            <p className='slideshowCounter' >{currentIndex + 1}/{images.length}</p>
             <p className='nextArrow' onClick={goToNext}>&#8250;</p>
         </div>
     )
