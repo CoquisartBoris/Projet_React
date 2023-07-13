@@ -4,16 +4,17 @@
     color: white;
     margin-bottom: 75px;
     .centered {
+        font-weight: 500;
+        font-size: 48px;
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
 .backgroundImg {
     width: 80%;
-    height: 200px;
-    background-color: black;
+    height: 220px;
     border-radius: 25px;
     object-fit: cover;
 }
